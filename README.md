@@ -1,6 +1,6 @@
 # NODE_APPS
 
-git cone repo
+git cone https://github.com/SChinnamutu/NODE_APPS.git
 
 npm install
 
