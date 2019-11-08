@@ -4,7 +4,7 @@ git cone https://github.com/SChinnamutu/NODE_APPS.git
 
 npm install
 
-npm start
+node app.js
 
 Import the below collection in to postman and check the apis.
 
