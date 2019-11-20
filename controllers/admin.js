@@ -69,7 +69,7 @@ exports.admin_login = (req, res, next) => {
               adminId: admin[0]._id,
               role: admin[0].role
             },
-            process.env.JWT_KEY,
+            "Messi@0934",
             {
               expiresIn: "1h"
             }

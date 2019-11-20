@@ -44,7 +44,10 @@ router.use('/dashbaord',dashbaordRoutes);
 
 //dashbaordRoutes.post("/", checkAdmin, AdminController.admin_dashboard); admin_dashboard does not exist hence throws error
 
-dashbaordRoutes.post("/addproduct", checkAdmin, upload.single('productImage'), ProductsController.products_create_product);
+//dashbaordRoutes.post("/addproduct", checkAdmin, upload.single('productImage'),
+ //ProductsController.products_create_product);
+
+dashbaordRoutes.post("/addproduct", checkAdmin,ProductsController.products_create_product);
 
 dashbaordRoutes.patch("/:productId", checkAdmin, ProductsController.products_update_product);
 
