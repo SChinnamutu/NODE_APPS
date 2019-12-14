@@ -1,20 +1,23 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-const cors = require('cors');
+const express = require("express");
+const bodyParser = require("body-parser");
 
-app = express();
+const app = express();
 
-//Cargar rutas
-var appRoutes = require('./routes/approutes');
-
-//cors
-app.use(cors({origin: '*'}));
-app.use(express.json());
-
-app.use(bodyParser.urlencoded({ extended: true }));
+// parse requests of content-type - application/json
 app.use(bodyParser.json());
 
-app.use('/', appRoutes);
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
-module.exports = app;
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to bezkoder application." });
+});
 
+require("./app/routes/customer.routes.js")(app);
+
+// set port, listen for requests
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
