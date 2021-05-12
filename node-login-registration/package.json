@@ -18,7 +18,7 @@
     "jsonwebtoken": "^5.0.5",
     "mongoose": "^4.1.5",
     "morgan": "^1.6.1",
-    "nodemailer": "^1.4.0",
+    "nodemailer": "^6.4.16",
     "nodemailer-smtp-transport": "^1.0.3",
     "nodemon": "^1.5.1"
   }
